@@ -191,6 +191,7 @@ def pokaz_tabele(komenda, liczba_patroli, dzien_tygodnia, miesiac, typ_przesteps
     labels = kmeans.predict(X)
     df['cluster'] = labels
     
+    #zdefiniowanie wyświetlanej tabeli
     b=kmeans.cluster_centers_
     b = pd.DataFrame({'Latitude': b[:, 0], 'Longitude': b[:, 1]})
     b['cluster']=np.arange(len(b))
